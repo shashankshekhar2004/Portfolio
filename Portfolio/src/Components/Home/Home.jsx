@@ -1,7 +1,6 @@
 import React from "react";
-import avatarImg from "../../assets/jejd.jpg";
-import TextChange from "../../TextChange";
-import resumeFile from "../../assets/Resume.pdf";
+import avatarImg from "../../assets/Image1.jpg";
+import resumeFile from "../../assets/SHASHANK_Resume.pdf";
 
 const Home = () => {
   return (
@@ -9,7 +8,7 @@ const Home = () => {
       {/* Left Section */}
       <div className="md:w-2/4 md:pt-10 flex flex-col justify-center">
         <h1 className="text-xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text mb-6">
-          <TextChange />
+          Hi, I'm Shashank
         </h1>
         <p className="text-sm md:text-2xl tracking-tight mb-6">
           A passionate Full Stack Developer dedicated to building responsive,
@@ -17,16 +16,18 @@ const Home = () => {
         </p>
 
         <div className="flex gap-4 flex-wrap">
-          {/* Contact Button */}
-          <button className="text-white py-2 px-4 text-sm md:text-lg hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-red-800">
-            Contact Me
-          </button>
+          <div className="text-white py-2 px-4 text-sm md:text-lg font-semibold rounded-3xl bg-green-800">
+            Turning ideas into reality through code
+          </div>
 
-          {/* Resume Button */}
+          {/* Improved Resume Button */}
           <a
             href={resumeFile}
-            download="Your_Name_Resume.pdf"
-            className="text-white py-2 px-4 text-sm md:text-lg hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl border-2 bg-green-700 border-[#465697]"
+            download="SHASHANK_Resume.pdf"
+            className="text-white py-2 px-4 text-sm md:text-lg font-semibold rounded-3xl
+            bg-gradient-to-r from-cyan-500 to-blue-700 border border-cyan-400
+            shadow-md hover:shadow-xl hover:scale-105 hover:from-cyan-400 hover:to-blue-600
+            transition-all duration-300"
           >
             Download Resume
           </a>

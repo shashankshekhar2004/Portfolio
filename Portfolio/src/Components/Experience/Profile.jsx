@@ -1,8 +1,8 @@
 import React from "react";
 import leetcodeImg from "../../assets/leetcode.png";
 import gfgImg from "../../assets/gfg.jpeg";
-import codechefImg from "../../assets/codechef.jpg"; // ensure this file exists and has the correct extension
-import codeforcesImg from "../../assets/codeforces.png";
+import codechefImg from "../../assets/codechef.jpg";
+import codingNinjasImg from "../../assets/ninjas.jpg";
 
 const CodingProfiles = () => {
   const platforms = [
@@ -22,34 +22,45 @@ const CodingProfiles = () => {
       link: "https://www.codechef.com/users/shashankcric",
     },
     {
-      name: "Codeforces",
-      image: codeforcesImg,
-      link: "https://codeforces.com/profile/shashank_007",
+      name: "Coding Ninjas",
+      image: codingNinjasImg,
+      link: "https://www.naukri.com/code360/profile/2c74fc66-9b63-4fd2-a4ea-ba2421693c8b",
     },
   ];
 
   return (
-    <div id="Experience" className="p-10 md:p-24">
-      <h1 className="text-2xl md:text-4xl text-white font-bold text-center">
+    <div
+      id="Coding"
+      className="relative z-10 bg-gradient-to-br from-[#1a1f3b] to-[#121827] px-6 py-20 md:px-24 text-white"
+    >
+      {/* Background blobs */}
+      <div className="absolute top-0 left-0 w-60 h-60 bg-cyan-500 opacity-20 blur-[120px] rounded-full -z-10" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-600 opacity-20 blur-[140px] rounded-full -z-10" />
+
+      <h1 className="text-3xl md:text-5xl font-extrabold text-center mb-14 border-b-4 border-cyan-400 inline-block pb-2">
         Coding Profiles
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-12">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 place-items-center">
         {platforms.map((platform, index) => (
           <a
             key={index}
             href={platform.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-zinc-900 hover:bg-zinc-800 p-8 rounded-3xl w-full flex flex-col items-center transition-transform transform hover:scale-105 shadow-lg"
+            title={`Visit my ${platform.name} profile`}
+            className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl w-72 flex flex-col overflow-hidden transition-transform hover:scale-105 hover:shadow-2xl hover:bg-white/10"
           >
             <img
               src={platform.image}
-              alt={platform.name}
-              className="w-60 h-50 object-contain mb-6"
+              alt={`${platform.name} banner`}
+              className="w-full h-40 object-cover"
             />
-            <span className="text-white text-xl font-bold">
-              {platform.name}
-            </span>
+            <div className="p-4 flex-1 flex flex-col justify-center items-center">
+              <span className="text-white text-xl font-semibold tracking-wide mb-1 hover:text-cyan-400 transition-colors">
+                {platform.name}
+              </span>
+            </div>
           </a>
         ))}
       </div>

@@ -7,44 +7,67 @@ const Footer = () => {
   return (
     <footer
       id="Footer"
-      className="bg-[#1f2a48] text-white px-8 py-12 md:px-24 md:py-16 flex flex-col md:flex-row justify-between items-start gap-10"
+      className="bg-gradient-to-tr from-[#1f2a48] to-[#273656] text-white px-8 py-12 md:px-24 md:py-16 flex flex-col md:flex-row justify-between items-start gap-10"
     >
       {/* Contact Section */}
-      <div>
-        <h1 className="text-3xl md:text-5xl font-bold mb-2">Get in Touch</h1>
-        <p className="text-sm md:text-lg text-gray-300">
-          I'd love to hear from you. Let's connect!
+      <div className="space-y-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+          Get in <span className="text-cyan-400">Touch</span>
+        </h1>
+        <p className="text-sm md:text-base text-gray-300 max-w-sm">
+          I’d love to hear from you — whether you have a question, opportunity,
+          or just want to connect.
         </p>
       </div>
 
       {/* Links Section */}
-      <ul className="space-y-4 text-sm md:text-lg">
-        <li className="flex items-center gap-2 hover:text-cyan-400 transition-all">
-          <MdOutlineEmail size={22} />
-          <a href="mailto:myemail@gmail.com" className="underline">
-            myemail@gmail.com
+      <ul className="space-y-4 text-sm md:text-lg font-medium">
+        <li className="flex items-center gap-3 group">
+          <div className="bg-cyan-500/20 p-2 rounded-full group-hover:bg-cyan-500 transition">
+            <MdOutlineEmail
+              size={22}
+              className="text-cyan-400 group-hover:text-white transition"
+            />
+          </div>
+          <a
+            href="mailto:shashank2002shekhar@gmail.com"
+            className="text-gray-300 hover:text-cyan-400 underline underline-offset-4 transition"
+          >
+            Email
           </a>
         </li>
-        <li className="flex items-center gap-2 hover:text-cyan-400 transition-all">
-          <CiLinkedin size={22} />
+
+        <li className="flex items-center gap-3 group">
+          <div className="bg-cyan-500/20 p-2 rounded-full group-hover:bg-cyan-500 transition">
+            <CiLinkedin
+              size={22}
+              className="text-cyan-400 group-hover:text-white transition"
+            />
+          </div>
           <a
-            href="https://linkedin.com/in/username"
+            href="https://www.linkedin.com/in/shashank-shekhar-3b029024b"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
+            className="text-gray-300 hover:text-cyan-400 underline underline-offset-4 transition"
           >
-            linkedin.com/in/username
+            LinkedIn
           </a>
         </li>
-        <li className="flex items-center gap-2 hover:text-cyan-400 transition-all">
-          <FaGithub size={22} />
+
+        <li className="flex items-center gap-3 group">
+          <div className="bg-cyan-500/20 p-2 rounded-full group-hover:bg-cyan-500 transition">
+            <FaGithub
+              size={22}
+              className="text-cyan-400 group-hover:text-white transition"
+            />
+          </div>
           <a
-            href="https://github.com/username"
+            href="https://github.com/shashankshekhar2004"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
+            className="text-gray-300 hover:text-cyan-400 underline underline-offset-4 transition"
           >
-            github.com/username
+            GitHub
           </a>
         </li>
       </ul>

@@ -22,8 +22,8 @@ const Navbar = () => {
         <a href="#About" onClick={() => openMenu(false)}>
           <li className={navLinkStyle}>About</li>
         </a>
-        <a href="#Experience" onClick={() => openMenu(false)}>
-          <li className={navLinkStyle}>Experience</li>
+        <a href="#Coding" onClick={() => openMenu(false)}>
+          <li className={navLinkStyle}>Coding Profiles</li>
         </a>
         <a href="#Projects" onClick={() => openMenu(false)}>
           <li className={navLinkStyle}>Projects</li>
